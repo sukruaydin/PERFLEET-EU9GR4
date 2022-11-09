@@ -1,0 +1,25 @@
+
+
+
+RULES:
+
+   1 - Nobody is allowed to add/remove anything to
+            BasePage,
+            Hooks,
+            CukesRunner,
+            utilities
+                without informing teamLead
+   2 - Leave CukesRunner.java class as default before you commit
+   3 - Please follow naming conventions as shown
+   4 - Everybody will have only 1 .feature file & 1 step definition class
+   5 - Pull Request Time is between 21.00 - 00.00
+
+
+   -- BUDDIES
+   ekrem - serdar
+   cemal - m.pişgin - burhan
+   turgay - emre
+   kavak- ş.aydın
+
+
+
