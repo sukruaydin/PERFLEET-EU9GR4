@@ -1,21 +1,21 @@
-Automation Testing Exercise Project
+# Automation Testing Exercise Project
 Project Name : PERFLEET-EU9GR4
 In this repository, as a team, we use different test scenarios to show how QA/SDET can 
 implement Cucumber framework, which is one of the populer framework in the IT market, 
 in their work environment. As seen, Cucumber framework is easy to use for particulary a UI test.
 
-Instructions
+## Instructions
 Test Scenarios are prepared by;
 
-Serdar 
-Cemal
-Emre
-Ekrem
-Mustafa
-Muhammet
-Turgay
-Burhan
-Şükrü
+**Serdar**
+**Cemal**
+**Emre**
+**Ekrem**
+**Mustafa**
+**Muhammet**
+**Turgay**
+**Burhan**
+**Şükrü**
 
 QA Team
 
