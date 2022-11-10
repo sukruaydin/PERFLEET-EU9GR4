@@ -7,6 +7,7 @@ public class Login_StepDefinitions {
 
     @Given("User logs in as {string}")
     public void userLogsInAs(String userType) {
+
         switch (userType){
             case "driver":
                 BasePage.loginAsDriver();

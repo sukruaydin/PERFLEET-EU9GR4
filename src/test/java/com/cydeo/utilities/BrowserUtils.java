@@ -18,7 +18,7 @@ public class BrowserUtils {
 
     //turns-off implicitly wait, sets-up explicitly wait, returns WebDriverWait object
     public static WebDriverWait explicitlyWait(){
-        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        //Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         return wait;
     }
