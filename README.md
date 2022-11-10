@@ -9,6 +9,7 @@ Test Scenarios are prepared by;
 
 ## QA Team
 
+**Yakup**
 **Serdar**
 **Cemal**
 **Emre**
