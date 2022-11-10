@@ -7,6 +7,8 @@ in their work environment. As seen, Cucumber framework is easy to use for partic
 ## Instructions
 Test Scenarios are prepared by;
 
+## QA Team
+
 **Serdar**
 **Cemal**
 **Emre**
@@ -17,7 +19,7 @@ Test Scenarios are prepared by;
 **Burhan**
 **Şükrü**
 
-QA Team
+
 
 qaTeam@gmail.com
 
