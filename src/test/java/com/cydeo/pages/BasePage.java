@@ -93,7 +93,4 @@ public abstract class BasePage {
         userNameDropdown.click();
         logOutButton.click();
     }
-
-
-
 }
