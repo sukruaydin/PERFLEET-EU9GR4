@@ -3,7 +3,10 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.OdometerFilterPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class OdometerFilter_serdar_PRF721_StepDefinitions {
 
@@ -23,29 +26,20 @@ public class OdometerFilter_serdar_PRF721_StepDefinitions {
     }
     @Given("the user clicks manage filters button")
     public void the_user_clicks_manage_filters_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        odometerFilterPage.clickManagerFilter();
     }
     @Given("the user selects {string} filter")
-    public void the_user_selects_filter(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_selects_filter(String filters) {
+    OdometerFilterPage.manageFilterMenu(filters);
     }
     @Given("the user clicks on methods")
     public void the_user_clicks_on_methods() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    odometerFilterPage.clickFilterMethods();
     }
     @Then("the user must see the methods below")
-    public void the_user_must_see_the_methods_below(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
-        throw new io.cucumber.java.PendingException();
+    public void the_user_must_see_the_methods_below(List<String> expectedMethods) {
+        List<String> actualMethods = odometerFilterPage.getFilterMethods();
+        Assert.assertEquals(expectedMethods,actualMethods);
     }
 
 

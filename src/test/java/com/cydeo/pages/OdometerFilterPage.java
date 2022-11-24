@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class OdometerFilterPage extends BasePage{
 
     //=============================Methods============================//
@@ -76,6 +79,16 @@ public class OdometerFilterPage extends BasePage{
         Assert.assertTrue(manageFilterBtn.isDisplayed());
     }
 
+    /** click the manager filter button*/
+    public void clickManagerFilter () {
+        clickWithWait(manageFilterBtn , 10);
+    }
+
+    /** click filter methods*/
+    public void clickFilterMethods(){
+        clickWithWait(filterMethodsBtn,10);
+    }
+
 
 
     //=============================Located Elements============================//
@@ -90,10 +103,37 @@ public class OdometerFilterPage extends BasePage{
     }
 
     @FindBy (xpath = "//a[@class = 'action btn mode-icon-only pressed']")
-    private WebElement filtersBtn;
+    public WebElement filtersBtn;
 
     @FindBy (xpath = "//a[@class = 'add-filter-button']")
     private WebElement manageFilterBtn;
+
+    public static void manageFilterMenu (String filters) {
+        WebElement selectedFilters = Driver.getDriver().findElement(By.xpath("//label[@title = '" + filters +"']"));
+        selectedFilters.click();
+    }
+
+    @FindBy (css = "div[class = 'btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value']")
+    private List<WebElement> allFilterOnThePage;
+
+    @FindBy (xpath = "//button[@class = 'btn dropdown-toggle']")
+    private WebElement filterMethodsBtn;
+
+    @FindBy (xpath = "//a[@class= 'dropdown-item choice-value']")
+    private List<WebElement> allFilterMethods;
+
+    public List<String> getElementText(List<WebElement> list){
+
+        List<String> elementText = new ArrayList<>();
+        for (WebElement each : list){
+            elementText.add(each.getText());
+        }
+        return elementText;
+    }
+    public List<String> getFilterMethods() {
+        List<String> actualMethods = getElementText(allFilterMethods);
+        return actualMethods;
+    }
 
 
 

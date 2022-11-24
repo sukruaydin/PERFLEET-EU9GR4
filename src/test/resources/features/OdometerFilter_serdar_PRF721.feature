@@ -27,8 +27,9 @@
 
     @wip
     #AC-1
-    Scenario:
-      Given User logs in as "userType"
+    Scenario Outline:
+      Given user is on the log in page
+      When user enters "<username>" and "<password>"
       And the user navigates to "Fleet" - "Vehicles" module
       And the user clicks on "Filters" button from the top right menu
       And Manage filters showed up
@@ -46,6 +47,11 @@
         | Equals Or Less Than |
         | Is Empty            |
         | Is Not Empty        |
+      Examples:
+        | username        | password    |
+    # | user1           | UserUser123 |
+    #    | storemanager51 | UserUser123 |
+        | salesmanager101 | UserUser123 |
 
 
 
