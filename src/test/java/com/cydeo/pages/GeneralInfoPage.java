@@ -49,6 +49,23 @@ public class GeneralInfoPage extends BasePage{
     @FindBy (xpath = "//label[@class='control-label']")
     public  List<WebElement> listOfElementsGeneralInfoPage;
 
+    @FindBy(xpath = "//ul[@class='unstyled options']")
+    public WebElement anyRow;
+
+    @FindBy(xpath = "//span[contains(text(),'Fleet') and @class='title title-level-1']")
+    public WebElement fleet;
+
+    @FindBy(xpath = "//span[.='Vehicles']")
+    public WebElement vehicles;
+
+    @FindBy(xpath = "//span[.='Add Event']")
+    public WebElement addEventPopUpPage;
+
+    @FindBy(xpath = "//button[.='Cancel']")
+    public WebElement cancel;
+
+
+
 
 
 
