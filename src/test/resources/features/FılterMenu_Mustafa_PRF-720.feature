@@ -1,4 +1,4 @@
-@kvk
+@wipMK
 Feature: As a user, I should be able to filter vehicle table, in Fleet-Vehicle page
 
   Scenario Outline: AC-1 When user clicks on filter icon, "Manage Filter" button should be visible
@@ -32,7 +32,8 @@ Feature: As a user, I should be able to filter vehicle table, in Fleet-Vehicle p
     And goes to fleet-vehicles page
     When user clicks to filter icon
     And user clicks to manage filters button
-    And user types "Tags" inside the manage filter
+    And user types name inside the manage filter
+    |Tags|
     Then user should see changing of the total number
 
     Examples:
@@ -48,8 +49,9 @@ Feature: As a user, I should be able to filter vehicle table, in Fleet-Vehicle p
     And goes to fleet-vehicles page
     When user clicks to filter icon
     And user clicks to manage filters button
-    And user types "Licence" ands clicks to choose filter name randomly inside the manage filter
-    Then user should see changing of the total number
+    And user types name ands clicks to choose filter name randomly inside the manage filter
+    |License|
+    And user should see changing of the total number
     And user clicks the reset icon
     Then user should see all filters can be removed
     Examples:
