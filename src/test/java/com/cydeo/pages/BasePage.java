@@ -70,12 +70,13 @@ public abstract class BasePage {
     }
 
     public static void loginAsStoreManager(){
-        inputBoxUsername.sendKeys(ConfigurationReader.getProperty("store_manager_username"));
-        inputBoxPassword.sendKeys(ConfigurationReader.getProperty("store_manager_password"));
+        inputBoxUsername.sendKeys("storemanager51");
+        inputBoxPassword.sendKeys("UserUser123");
         loginButton.click();
     }
 
     public static void loginWithCredentials(String username, String password){
+        BrowserUtils.sleep(2);
         inputBoxUsername.sendKeys(username);
         inputBoxPassword.sendKeys(password);
         loginButton.click();
@@ -93,7 +94,4 @@ public abstract class BasePage {
         userNameDropdown.click();
         logOutButton.click();
     }
-
-
-
 }
