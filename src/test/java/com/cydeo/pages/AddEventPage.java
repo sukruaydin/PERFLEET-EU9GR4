@@ -74,6 +74,9 @@ public class AddEventPage extends GeneralInfoPage{
     @FindBy(xpath = "//span[. = 'General Information']")
     public WebElement GenInfoTitle;
 
+    @FindBy(xpath = "(//label[@class = 'required'])[1]")
+    public WebElement addEventTitle1;
+
     @FindBy(xpath = "//span[@id='ui-id-6']")
     public WebElement addEventTitle;
 

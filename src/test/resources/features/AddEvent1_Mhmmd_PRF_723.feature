@@ -40,7 +40,7 @@ Feature:  As a Store Manager and Sales Manager, I should be able to add an event
       | salesmanager |
       | storemanager |
 
-Scenario Outline: If any compulsory field is not filled, "This value should not be blank." message should be displayed after clicking on save button.
+  Scenario Outline: If any compulsory field is not filled, "This value should not be blank." message should be displayed after clicking on save button.
 
   Given The user "<userType>" is on the Add Event  pop up page
   When The user fills out compulsory areas and save click
