@@ -64,6 +64,9 @@ public class GeneralInfoPage extends BasePage{
     @FindBy(xpath = "//button[.='Cancel']")
     public WebElement cancel;
 
+    @FindBy(xpath = "(//td[@class = 'string-cell grid-cell grid-body-cell grid-body-cell-LicensePlate'])[1]")
+    public WebElement anyrow1;
+
 
 
 
