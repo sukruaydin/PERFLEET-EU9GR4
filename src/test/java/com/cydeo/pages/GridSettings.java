@@ -20,6 +20,9 @@ public class GridSettings extends Vehicles{
     @FindBy(xpath = "//a[@title='Grid Settings']")
     public WebElement gridSettingsButton;
 
+    @FindBy(xpath = "//div[@class='column-manager-title']")
+    public WebElement gridSettingsColumnManagerText;
+
     @FindBy(xpath = "//input[@data-role='column-manager-search']")
     public WebElement quickSearchInputBox;
 
@@ -105,13 +108,15 @@ public class GridSettings extends Vehicles{
 
 
 
+
+
     @FindBy(xpath = "//tr//label")
     public List<WebElement> namesOnGridSettings;
 
     @FindBy(xpath = "//span[@title='Move column']")
     public List<WebElement> sortOnGridSettings;
 
-    @FindBy(xpath = "//td[@class='visibility-cell']")
+    @FindBy(xpath = "//tr/td/input")
     public List<WebElement> showOnGridSettings;
 
 
