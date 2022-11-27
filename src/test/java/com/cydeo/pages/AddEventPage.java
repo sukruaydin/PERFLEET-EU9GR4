@@ -66,6 +66,40 @@ public class AddEventPage extends GeneralInfoPage{
     @FindBy(xpath = "//span[.='By']")
     public WebElement by;
 
+    //-----------------------------------
+
+    @FindBy(xpath = "//a[@class = 'btn icons-holder-text no-hash']")
+    public WebElement addEventBtn;
+
+    @FindBy(xpath = "//span[. = 'General Information']")
+    public WebElement GenInfoTitle;
+
+    @FindBy(xpath = "(//label[@class = 'required'])[1]")
+    public WebElement addEventTitle1;
+
+    @FindBy(xpath = "//span[@id='ui-id-6']")
+    public WebElement addEventTitle;
+
+    @FindBy(xpath = "//input[@id = 'oro_calendar_event_form_title-uid-63826fcd978c2']")
+    public WebElement popUpTitle;
+
+    @FindBy(xpath = "(//label[@class = 'required'])[2]")
+    public WebElement popUpOwner;
+
+    @FindBy(xpath = "(//label[@class = 'required'])[3]")
+    public WebElement popUpOrganizer;
+
+    @FindBy(xpath = "(//label[@class = 'required'])[4]")
+    public WebElement popUpOrganizerEmail;
+
+    @FindBy(xpath = "(//label[@class = 'required'])[5]")
+    public WebElement popUpStartDate;
+
+    @FindBy(xpath = "(//label[@class = 'required'])[6]")
+    public WebElement popUpEndDate;
+
+    @FindBy(xpath = "//span[@class = 'ui-button-icon-space']")
+    public WebElement popUpCloseBtn;
 
 
 
@@ -86,6 +120,94 @@ public class AddEventPage extends GeneralInfoPage{
         startTimeButton.click();
         BrowserUtils.sleep(1);
         startSelect2_30.click();
+    }
+
+    public void fillNotOutCompulsoryAreas1(){
+
+        addEventBtn.click();
+
+        BrowserUtils.sleep(1);
+        bothify = faker.bothify("Meeting##");
+         //  title.sendKeys(bothify);
+        BrowserUtils.sleep(1);
+        orgDisplayName.sendKeys(faker.name().firstName());
+        BrowserUtils.sleep(1);
+        orgEmail.sendKeys(faker.internet().emailAddress());
+
+        BrowserUtils.sleep(1);
+        startDateButton.click();
+        BrowserUtils.sleep(1);
+        startSelect26.click();
+        BrowserUtils.sleep(1);
+        startTimeButton.click();
+        BrowserUtils.sleep(1);
+        startSelect2_30.click();
+
+//        BrowserUtils.sleep(2);
+//        saveButton.click();
+
+        BrowserUtils.sleep(3);
+      //  popUpCloseBtn.click();
+
+       }
+
+    public void fillNotOutCompulsoryAreas2(){
+
+        addEventBtn.click();
+
+
+        BrowserUtils.sleep(1);
+        bothify = faker.bothify("Meeting##");
+        title.sendKeys(bothify);
+        BrowserUtils.sleep(1);
+        // orgDisplayName.sendKeys(faker.name().firstName());
+        BrowserUtils.sleep(1);
+        orgEmail.sendKeys(faker.internet().emailAddress());
+
+        BrowserUtils.sleep(1);
+        startDateButton.click();
+        BrowserUtils.sleep(1);
+        startSelect26.click();
+        BrowserUtils.sleep(1);
+        startTimeButton.click();
+        BrowserUtils.sleep(1);
+        startSelect2_30.click();
+
+ //       BrowserUtils.sleep(2);
+ //       saveButton.click();
+
+        BrowserUtils.sleep(3);
+//        popUpCloseBtn.click();
+
+    }
+
+    public void fillNotOutCompulsoryAreas3(){
+
+        addEventBtn.click();
+
+
+        BrowserUtils.sleep(1);
+        bothify = faker.bothify("Meeting##");
+        title.sendKeys(bothify);
+        BrowserUtils.sleep(1);
+        orgDisplayName.sendKeys(faker.name().firstName());
+        BrowserUtils.sleep(1);
+       // orgEmail.sendKeys(faker.internet().emailAddress());
+
+        BrowserUtils.sleep(1);
+        startDateButton.click();
+        BrowserUtils.sleep(1);
+        startSelect26.click();
+        BrowserUtils.sleep(1);
+        startTimeButton.click();
+        BrowserUtils.sleep(1);
+        startSelect2_30.click();
+
+  //     BrowserUtils.sleep(2);
+ //      saveButton.click();
+
+       BrowserUtils.sleep(3);
+ //      popUpCloseBtn.click();
     }
 
     public boolean isMeetingExist(){
