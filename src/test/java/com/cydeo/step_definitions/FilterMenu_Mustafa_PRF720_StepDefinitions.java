@@ -6,7 +6,6 @@ import com.cydeo.pages.Vehicles;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.*;
-import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -25,7 +24,7 @@ public class FilterMenu_Mustafa_PRF720_StepDefinitions {
     int sizeOfElementAfter=0;
 
     @Given("user can be logged in as {string}")
-    public void user_can_be_logged_in_as(@NotNull String userType) {
+    public void user_can_be_logged_in_as(String userType) {
         BasePage.goToLoginPage();
         if (userType.equals("salesmanager")) {
             BasePage.loginAsSalesManager();
